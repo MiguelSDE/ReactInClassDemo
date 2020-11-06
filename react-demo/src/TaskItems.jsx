@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 
 class TaskItems extends Component{
     render(){
-        const { tasks } = this.props;
+        const { tasks, buttonFunction } = this.props;
         return (
-            <div>
+            <div onClick={() => buttonFunction(tasks)}>
                 {tasks}
             </div>
         )
