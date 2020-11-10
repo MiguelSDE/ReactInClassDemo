@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component }  from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TaskList from './TaskList';
@@ -7,7 +7,7 @@ class App extends Component {
     constructor(){
         super()
         this.state = {
-            todoList: ['item 2', 'item2'],
+            todoList: ['item2', 'item 1'],
             task: ''
         }
     }
@@ -26,7 +26,7 @@ class App extends Component {
                     <button type='submit'>Add Todo</button>
                 </form>
                 <TaskList title={'Pending Todo'} buttonText={'Done'} tasks={this.state.todoList} buttonFunction={this.removeTodo} />
-                <TaskList title={'Completed'} buttonText={'Delete'} tasks={['done']} buttonFunction={this.deleteTodo} />
+                <TaskList title={'Completed'} buttonText={"Delete"} tasks={['done']} buttonFunction={this.deleteTodo} />
             </div>
         );
     }
@@ -39,11 +39,12 @@ class App extends Component {
         let index = todoList.indexOf(key);
         if(index > -1){
             todoList.splice(index, 1);
+            this.setState({todoList: todoList})
         }
-        this.setState({todoList: todoList})
     }
+
     deleteTodo = key =>{
-        console.log(key);
+        console.log(key)
     }
 }
 
