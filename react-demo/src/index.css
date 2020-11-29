@@ -1,13 +1,51 @@
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+ background-image: url("https://pixy.org/src/5/58564.jpg");
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.418);
+  text-decoration: line-through;   
+}
+
+li {
+    font-size: 1.1em;
+}
+
+div#navigation {
+    width: 200px; 
+}
+
+
+h1 {
+    color: rgb(9, 94, 9);
+    text-shadow: 2px 2px #b5d6b6;
+    margin-top: 25px;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px #074704;
+    margin-top: 25px;
+    font-size: 1.5em;
 }

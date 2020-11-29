@@ -8,7 +8,7 @@ class TaskList extends Component{
         const taskItems = tasks.map((task)=> <TaskItems tasks={task} key={task} buttonFunction={buttonFunction}/>);
         return (
             <div>
-                {title}
+                <h3>{title}</h3>
                 {taskItems}
                 {/* <button onClick={() => buttonFunction}>{buttonText}</button> */}
             </div>

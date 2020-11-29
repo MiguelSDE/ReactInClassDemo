@@ -14,17 +14,19 @@ class App extends Component {
     render(){
         return (
             <div className="App">
-                <h1>To-do List</h1>
-                <form onSubmit={(e) => this.addTodo(e)}>
-                    <input
-                        type='text'
-                        className='input'
-                        placeholder='Enter Todo Item'
-                        value={this.state.task}
-                        onChange={(e) => this.setState({task: e.target.value})}
-                    />
-                    <button type='submit'>Add Todo</button>
-                </form>
+                <h1><strong>To-do List</strong></h1>
+                <div class="row justify-content-center">
+                    <form class="form-inline my-2 my-lg-0" onSubmit={(e) => this.addTodo(e)}>
+                        <input 
+                            type='text'
+                            class="form-control mr-sm-2"
+                            placeholder='Enter Todo Item'
+                            value={this.state.task}
+                            onChange={(e) => this.setState({task: e.target.value})}
+                        />
+                        <button type='submit' class="btn btn-success">Add Todo</button>
+                    </form>
+                </div>
                 <TaskList title={'Pending Todo:'} buttonText={'Done'} tasks={this.state.todoList} buttonFunction={this.removeTodo} />
                 <TaskList title={'Completed:'} buttonText={"Delete"} tasks={this.state.todoCompleted} buttonFunction={this.deleteTodo} />
             </div>
@@ -32,7 +34,7 @@ class App extends Component {
     }
     addTodo(e){
         e.preventDefault();
-        if (this.state.task !== null || this.state.task !== "") {
+        if (this.state.task !== "") {
             this.setState({task: '', todoList: [ ...this.state.todoList, this.state.task] });
         }
     }
